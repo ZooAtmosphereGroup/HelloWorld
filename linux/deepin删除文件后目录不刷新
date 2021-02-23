@@ -1,0 +1,12 @@
+调整最大文件监控数量
+
+sudo vim /etc/sysctl.conf
+添加参数
+
+fs.inotify.max_user_watches = 10000
+运行使配置生效
+
+sudo /sbin/sysctl -p
+
+
+source: https://www.cnblogs.com/chenkeyu/p/11820270.html
