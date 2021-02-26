@@ -1,0 +1,7 @@
+现象：
+git->repository->push->master empty repository
+
+
+操作：
+cd path_project
+git commit -m "Initial Commit"
