@@ -1,0 +1,25 @@
+centos 8
+
+# install ffmpeg
+yum -y install https://download1.rpmfusion.org/free/el/rpmfusion-free-release-8.noarch.rpm
+yum -y install ffmpeg ffmpeg-devel
+
+
+# download packages
+# https://repo.jellyfin.org/releases/server/centos/stable/
+wget https://repo.jellyfin.org/releases/server/centos/stable/server/jellyfin-server-10.7.0-1.el7.x86_64.rpm
+wget https://repo.jellyfin.org/releases/server/centos/stable/web/jellyfin-web-10.7.0-1.el7.noarch.rpm
+
+
+# install jellyfin
+yum -y install jellyfin-server-10.7.0-1.el7.x86_64.rpm
+yum -y install jellyfin-web-10.7.0-1.el7.noarch.rpm
+
+
+# start service
+systemctl enable jellyfin
+systemctl start jellyfin
+
+
+# validate
+http://192.168.1.2:8096
