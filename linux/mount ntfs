@@ -1,0 +1,2 @@
+yum -y install ntfs*
+mount -t ntfs-3g /dev/sdd1 /mnt/u/
